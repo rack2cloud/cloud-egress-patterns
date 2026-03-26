@@ -10,7 +10,10 @@
 ## 📚 Canonical Architecture Reference  
 This repository contains the Terraform decision matrices and cost surface models for optimizing egress routing.
 
-**The continuously maintained architectural specification lives here:** 👉 [https://www.rack2cloud.com/physics-of-data-egress/](https://www.rack2cloud.com/physics-of-data-egress/)
+**Architectural Framework:** 👉 [Cloud Egress Cost Explained](https://www.rack2cloud.com/cloud-egress-costs-explained/) — the comprehensive cost modeling and routing strategy guide
+
+**Terraform Decision Matrix Reference:** 👉 [ Physics of Data Egress](https://www.rack2cloud.com/physics-of-data-egress/) — the technical routing decision framework
+
 
 ---
 
