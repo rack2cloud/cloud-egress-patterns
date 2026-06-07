@@ -129,19 +129,15 @@ Once the window closes, exit becomes an architectural reconstruction exercise ra
 ## Cloud Economics
 
 ### Cloud Repatriation Economics Engine
-
 https://www.rack2cloud.com/cloud-repatriation-cost-model/
 
 ### Cloud Cost Governance Workbench
-
 https://www.rack2cloud.com/engineering-workbench/cloud-cost-governance/
 
 ### Cloud Idle Resource Analyzer
-
 https://www.rack2cloud.com/cloud-idle-resource-analyzer/
 
 ### Kubernetes Cost Density Calculator
-
 https://www.rack2cloud.com/kubernetes-cost-density-calculator/
 
 ---
@@ -149,15 +145,12 @@ https://www.rack2cloud.com/kubernetes-cost-density-calculator/
 # Architecture Assessments
 
 ### Cost Architecture Review
-
 https://www.rack2cloud.com/audits/cost-architecture-review/
 
 ### Recovery Readiness Assessment
-
 https://www.rack2cloud.com/audits/recovery-readiness-assessment/
 
 ### VMware Migration Readiness Assessment
-
 https://www.rack2cloud.com/audits/migration-readiness-assessment/
 
 ---
@@ -174,9 +167,7 @@ Recent architecture research relevant to cloud economics and exit readiness:
 * The Console Is the Shadow Control Plane
 * Most Sovereignty Strategies Fail Before Architecture Begins
 
-Published at:
-
-https://www.rack2cloud.com/cloud-strategy/
+Published at: [Cloud Architecture Strategy | Rack2Cloud](https://www.rack2cloud.com/cloud-strategy/)
 
 ---
 
