@@ -10,6 +10,8 @@
 ## 📚 Canonical Architecture Reference  
 This repository contains architectural models, Terraform decision frameworks, and cloud economics patterns used to evaluate data movement costs, egress exposure, cloud repatriation scenarios, and exit readiness.
 
+![Cloud Egress Cost Patterns](https://www.rack2cloud.com/wp-content/uploads/2026/06/cloud-egress-cost-patterns.jpg)
+
 ### Cloud Egress Economics
 
 * https://www.rack2cloud.com/cloud-egress-costs-explained/
@@ -31,7 +33,7 @@ This repository contains architectural models, Terraform decision frameworks, an
 
 ---
 
-## Problem Statement
+## Problem Statement: The $180k Routing Trap
 
 Cloud cost overruns are often attributed to compute consumption but frequently originate from data movement topology.
 
@@ -68,6 +70,8 @@ The model treats every data transfer boundary as a potential cost amplification 
 * Cross-provider transport
 * Internet egress fees
 * Third-party network services
+
+![Cloud Cost Surface Model](https://www.rack2cloud.com/wp-content/uploads/2026/06/Cloud-Cost-Surface-Model.jpg)
 
 ---
 
