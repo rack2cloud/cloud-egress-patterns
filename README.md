@@ -1,7 +1,10 @@
 # Cloud Egress Cost Patterns
 ### Eliminating the NAT Gateway Double-Metering Trap
 
+
+![Pillar](https://img.shields.io/badge/Pillar-Cloud%20Strategy-a78bfa)
 ![Status](https://img.shields.io/badge/Status-Architectural--Framework-blue)
+![Framework](https://img.shields.io/badge/Framework-%23104%20Exit%20Readiness%20Window-a78bfa)
 
 > **Architecture Principle:** Data gravity creates financial gravity. Your baseline cost is dictated by data mass; your multipliers are dictated by routing.
 
@@ -19,10 +22,10 @@ This repository contains architectural models, Terraform decision frameworks, an
 
 ### Cloud Exit & Repatriation
 
+* https://www.rack2cloud.com/cloud-exit-strategy/
+* https://www.rack2cloud.com/exit-cost-architecture/
 * https://www.rack2cloud.com/cloud-repatriation-calculus/
 * https://www.rack2cloud.com/cloud-repatriation-when-to-move-workloads-on-prem/
-* https://www.rack2cloud.com/exit-cost-architecture/
-* https://www.rack2cloud.com/cloud-exit-strategy/
 
 ### Vendor Lock-In & Dependency Architecture
 
@@ -102,7 +105,7 @@ Organizations frequently discover that data extraction costs become a major barr
 * Mergers and acquisitions
 * Platform consolidation efforts
 
-The cost of moving data often determines whether an exit remains economically viable.
+The cost of moving data often determines whether an exit remains economically viable. Cloud egress charges are frequently the first place organizations discover that architectural optionality has already been lost.
 
 ---
 
@@ -128,30 +131,23 @@ Once the window closes, exit becomes an architectural reconstruction exercise ra
 
 ## Cloud Economics
 
-### Cloud Repatriation Economics Engine
-https://www.rack2cloud.com/cloud-repatriation-cost-model/
+### [Cloud Repatriation Economics Engine](https://www.rack2cloud.com/cloud-repatriation-cost-model/)
 
-### Cloud Cost Governance Workbench
-https://www.rack2cloud.com/engineering-workbench/cloud-cost-governance/
+### [Cloud Cost Governance Workbench](https://www.rack2cloud.com/engineering-workbench/cloud-cost-governance/)
 
-### Cloud Idle Resource Analyzer
-https://www.rack2cloud.com/cloud-idle-resource-analyzer/
+### [Cloud Idle Resource Analyzer](https://www.rack2cloud.com/cloud-idle-resource-analyzer/)
 
-### Kubernetes Cost Density Calculator
-https://www.rack2cloud.com/kubernetes-cost-density-calculator/
+### [Kubernetes Cost Density Calculator](https://www.rack2cloud.com/kubernetes-cost-density-calculator/)
 
 ---
 
 # Architecture Assessments
 
-### Cost Architecture Review
-https://www.rack2cloud.com/audits/cost-architecture-review/
+### [Cost Architecture Review](https://www.rack2cloud.com/audits/cost-architecture-review/)
 
-### Recovery Readiness Assessment
-https://www.rack2cloud.com/audits/recovery-readiness-assessment/
+### [Recovery Readiness Assessment](https://www.rack2cloud.com/audits/recovery-readiness-assessment/)
 
-### VMware Migration Readiness Assessment
-https://www.rack2cloud.com/audits/migration-readiness-assessment/
+### [VMware Migration Readiness Assessment](https://www.rack2cloud.com/audits/migration-readiness-assessment/)
 
 ---
 
