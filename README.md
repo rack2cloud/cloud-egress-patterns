@@ -1,7 +1,7 @@
 # Cloud Egress Cost Patterns
 ### Eliminating the NAT Gateway Double-Metering Trap
 
-![Status](https://img.shields.io/badge/status-architectural--framework-blue)
+![Status](https://img.shields.io/badge/Status-Architectural--Framework-blue)
 
 > **Architecture Principle:** Data gravity creates financial gravity. Your baseline cost is dictated by data mass; your multipliers are dictated by routing.
 
@@ -31,7 +31,7 @@ This repository contains architectural models, Terraform decision frameworks, an
 
 ---
 
-## Problem Statement: The $180k Routing Trap
+## Problem Statement
 
 Cloud cost overruns are often attributed to compute consumption but frequently originate from data movement topology.
 
