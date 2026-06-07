@@ -8,20 +8,37 @@
 ---
 
 ## 📚 Canonical Architecture Reference  
-This repository contains the Terraform decision matrices and cost surface models for optimizing egress routing.
+This repository contains architectural models, Terraform decision frameworks, and cloud economics patterns used to evaluate data movement costs, egress exposure, cloud repatriation scenarios, and exit readiness.
 
-**Architectural Framework:** 👉 [Cloud Egress Cost Explained](https://www.rack2cloud.com/cloud-egress-costs-explained/) — the comprehensive cost modeling and routing strategy guide
+### Cloud Egress Economics
 
-**Terraform Decision Matrix Reference:** 👉 [ Physics of Data Egress](https://www.rack2cloud.com/physics-of-data-egress/) — the technical routing decision framework
+* https://www.rack2cloud.com/cloud-egress-costs-explained/
+* https://www.rack2cloud.com/physics-of-data-egress/
 
+### Cloud Exit & Repatriation
+
+* https://www.rack2cloud.com/cloud-repatriation-calculus/
+* https://www.rack2cloud.com/cloud-repatriation-when-to-move-workloads-on-prem/
+* https://www.rack2cloud.com/exit-cost-architecture/
+* https://www.rack2cloud.com/cloud-exit-strategy/
+
+### Vendor Lock-In & Dependency Architecture
+
+* https://www.rack2cloud.com/vendor-lock-in-networking-not-apis/
+* https://www.rack2cloud.com/infrastructure-control-plane-consolidation/
+* https://www.rack2cloud.com/shadow-control-plane/
+* https://www.rack2cloud.com/private-cloud-operating-model/
 
 ---
 
 ## Problem Statement: The $180k Routing Trap
 
-Cloud cost overruns are frequently attributed to compute scale but originate from underestimated data egress patterns. 
+Cloud cost overruns are often attributed to compute consumption but frequently originate from data movement topology.
 
-If your architecture uses a NAT Gateway for internal cloud service access (like AWS S3 or DynamoDB), you are paying for data transfer *twice*: once for the NAT processing fee ($0.045/GB), and once for the egress. This model maps cost as a function of data movement topology to eliminate double-metering.
+Architectures that route storage traffic through NAT Gateways, cross-region links, service meshes, or unnecessary inspection layers create compounded transfer costs that scale with data volume rather than workload complexity.
+
+This repository models those cost surfaces and provides routing guidance intended to minimize unnecessary egress exposure.
+
 
 ---
 
@@ -29,31 +46,140 @@ If your architecture uses a NAT Gateway for internal cloud service access (like 
 
 ![Boundary Graph Model](https://www.rack2cloud.com/wp-content/uploads/2026/02/diagram-egress-topology.jpg)
 
-**Nodes (Billable Boundaries):**
-- Data Origin (VPC/Subnet)
-- Inter-region traffic
-- Cross-cloud transfer
-- On-prem exit
-- SaaS consumption
+## Billable Boundaries
+
+The model treats every data transfer boundary as a potential cost amplification point.
+
+### Nodes
+
+* Data origin (VPC / subnet)
+* Cloud-native storage
+* Cross-region transfer
+* Cross-cloud transfer
+* Internet egress
+* SaaS consumption
+* On-premises connectivity
+
+### Cost Multipliers
+
+* NAT Gateway processing
+* Inter-region transfer
+* Transit Gateway processing
+* Cross-provider transport
+* Internet egress fees
+* Third-party network services
 
 ---
 
-## Routing Decision Matrix
+# Routing Decision Matrix
 
-| Scenario | Recommendation |
-| :--- | :--- |
-| **High S3 Throughput (VPC)** | ✅ Use VPC Gateway Endpoint (Free) |
-| **Cross-Region S3 Access** | ✅ Use VPC Interface Endpoint (PrivateLink) |
-| **Public API Access only** | ⚠️ NAT Gateway is sufficient |
-| **Multi-Region Peering** | ✅ Implement Hub-and-Spoke Transit Gateway |
-
----
-
-## The "Physics" of the Fix
-By implementing VPC Gateway Endpoints, traffic to cloud-native storage (like S3) remains on the cloud provider's global backbone. It bypasses the NAT Gateway entirely, dropping the per-GB processing fee to $0.00. 
+| Scenario                             | Recommendation                                |
+| ------------------------------------ | --------------------------------------------- |
+| High-volume S3 traffic inside AWS    | ✅ VPC Gateway Endpoint                        |
+| Cross-account private service access | ✅ PrivateLink                                 |
+| Public internet API access           | ⚠ NAT Gateway acceptable                      |
+| Multi-region connectivity            | ✅ Transit Gateway architecture                |
+| Hybrid connectivity                  | ✅ Direct Connect / ExpressRoute evaluation    |
+| Large-scale analytics export         | ✅ Dedicated egress modeling before deployment |
 
 ---
 
-## Support
+# Exit Readiness Considerations
 
-**Star this repo if you are actively optimizing cloud spend.** *Architectural frameworks maintained by **[Rack2Cloud](https://www.rack2cloud.com)***.
+Cloud egress cost is not only a cost optimization problem.
+
+It is also an exit readiness problem.
+
+Organizations frequently discover that data extraction costs become a major barrier during:
+
+* Cloud repatriation projects
+* VMware exit programs
+* Sovereignty initiatives
+* Mergers and acquisitions
+* Platform consolidation efforts
+
+The cost of moving data often determines whether an exit remains economically viable.
+
+---
+
+# Related Architectural Frameworks
+
+## Framework #104 — Exit Readiness Window
+
+The period during which an organization retains structural optionality to exit a cloud provider without architectural reconstruction.
+
+The window is maintained through:
+
+* Portable data architectures
+* Independent control planes
+* Organization-owned observability
+* Identity sovereignty
+* Modeled egress economics
+
+Once the window closes, exit becomes an architectural reconstruction exercise rather than a migration project.
+
+---
+
+# Tools & Assessment Models
+
+## Cloud Economics
+
+### Cloud Repatriation Economics Engine
+
+https://www.rack2cloud.com/cloud-repatriation-cost-model/
+
+### Cloud Cost Governance Workbench
+
+https://www.rack2cloud.com/engineering-workbench/cloud-cost-governance/
+
+### Cloud Idle Resource Analyzer
+
+https://www.rack2cloud.com/cloud-idle-resource-analyzer/
+
+### Kubernetes Cost Density Calculator
+
+https://www.rack2cloud.com/kubernetes-cost-density-calculator/
+
+---
+
+# Architecture Assessments
+
+### Cost Architecture Review
+
+https://www.rack2cloud.com/audits/cost-architecture-review/
+
+### Recovery Readiness Assessment
+
+https://www.rack2cloud.com/audits/recovery-readiness-assessment/
+
+### VMware Migration Readiness Assessment
+
+https://www.rack2cloud.com/audits/migration-readiness-assessment/
+
+---
+
+# Additional Research
+
+Recent architecture research relevant to cloud economics and exit readiness:
+
+* Multi-Cloud Failover Is Mostly Theater
+* Cross-Region Replication Is Not Resilience
+* The Infrastructure Control Plane Is Consolidating
+* The Platform Team Became a Finance Team
+* Idle Cost Is the New Egress Cost
+* The Console Is the Shadow Control Plane
+* Most Sovereignty Strategies Fail Before Architecture Begins
+
+Published at:
+
+https://www.rack2cloud.com/cloud-strategy/
+
+---
+
+# Support
+
+If this repository helps you evaluate cloud routing, egress exposure, repatriation planning, or exit readiness:
+
+⭐ Star the repository
+
+Architectural frameworks maintained by **[Rack2Cloud](https://www.rack2cloud.com)**.
